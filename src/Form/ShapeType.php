@@ -14,7 +14,6 @@ class ShapeType extends AbstractType
         $builder
             ->add('width')
             ->add('height')
-            ->add('area')
         ;
     }
 

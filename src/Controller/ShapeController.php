@@ -33,6 +33,7 @@ final class ShapeController extends AbstractController
             $entityManager->persist($shape);
             $entityManager->flush();
 
+            sleep(2);
             return $this->redirectToRoute('app_shape_index', [], Response::HTTP_SEE_OTHER);
         }
 
@@ -58,6 +59,8 @@ final class ShapeController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager->flush();
+
+            sleep(2);
 
             return $this->redirectToRoute('app_shape_index', [], Response::HTTP_SEE_OTHER);
         }
